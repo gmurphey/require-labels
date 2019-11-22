@@ -1,13 +1,16 @@
-name: CI
+name: Require Labels
 
-on: 
+on:
   pull_request:
     types: [opened, labeled, unlabeled]
 
 jobs:
-  build:
+  check:
+    name: Verify Labels
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: gmurphey/require-labels@v1
+    - uses: gmurphey/require-labels@label-setup
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
