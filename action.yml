@@ -4,7 +4,7 @@ author: 'Garrett Murphey'
 inputs:
   repo-token:
     description: 'The GITHUB_TOKEN secret'
-  configuration_path:
+  configuration-path:
     description: 'The path for the required label configurations'
     default: '.github/required-labels.yml'
 runs:
