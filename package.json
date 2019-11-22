@@ -1,0 +1,19 @@
+{
+  "name": "require-labels",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build src/main.js -o dist"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0",
+    "js-yaml": "^3.13.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2",
+    "@types/js-yaml": "^3.12.1",
+    "@zeit/ncc": "^0.20.5"
+  }
+}

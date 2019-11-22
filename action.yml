@@ -1,0 +1,12 @@
+name: 'Require Labels'
+description: 'Confirm that a PR has one or more required labels'
+author: 'Garrett Murphey'
+inputs:
+  repo-token:
+    description: 'The GITHUB_TOKEN secret'
+  configuration_path:
+    description: 'The path for the required label configurations'
+    default: '.github/required-labels.yml'
+runs:
+  using: 'node12'
+  main: 'lib/index.js'
