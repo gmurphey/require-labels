@@ -20,7 +20,7 @@ async function run() {
     const prLabelNames = await getPrLabelNames(client, prNumber);
 
     if (!prLabelNames.length) {
-      core.setFailed(`No labels found for pr #${prNumber}`);
+      // core.setFailed(`No labels found for pr #${prNumber}`);
     }
 
     const acceptableLabelNames = await getAcceptablePrLabelNames(client, configPath);
@@ -31,11 +31,11 @@ async function run() {
     }
 
     if (!prLabelNames.some((label) => acceptableLabelNames.includes(label))) {
-      core.setFailed(`None of the required labels were found on pr #${prNumber}`)
+      // core.setFailed(`None of the required labels were found on pr #${prNumber}`)
     }
   } catch (error) {
     core.error(error);
-    core.setFailed(error.message);
+    // core.setFailed(error.message);
   }
 }
 
