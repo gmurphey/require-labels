@@ -1,8 +1,7 @@
 name: Require Labels
 
 on:
-  pull_request:
-    types: [opened, labeled, unlabeled]
+  pull_request: {}
 
 jobs:
   check:
