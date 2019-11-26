@@ -460,7 +460,7 @@ async function run() {
     const prLabelNames = await getPrLabelNames(client, prNumber);
 
     if (!prLabelNames.length) {
-      _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(`No labels found for pr #${prNumber}`);
+      // core.setFailed(`No labels found for pr #${prNumber}`);
     }
 
     const acceptableLabelNames = await getAcceptablePrLabelNames(client, configPath);
@@ -471,11 +471,11 @@ async function run() {
     }
 
     if (!prLabelNames.some((label) => acceptableLabelNames.includes(label))) {
-      _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(`None of the required labels were found on pr #${prNumber}`)
+      // core.setFailed(`None of the required labels were found on pr #${prNumber}`)
     }
   } catch (error) {
     _actions_core__WEBPACK_IMPORTED_MODULE_0__.error(error);
-    _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(error.message);
+    // core.setFailed(error.message);
   }
 }
 
