@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: gmurphey/require-labels@master
+    - uses: gmurphey/require-labels@documentation
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
