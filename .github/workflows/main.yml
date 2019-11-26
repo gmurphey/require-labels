@@ -1,7 +1,7 @@
 name: Require Labels
 
 on:
-  pull_request:
+  issues:
     types: [opened, labeled, unlabeled]
 
 jobs:
